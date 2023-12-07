@@ -117,7 +117,7 @@
   </style>
 </head>
 
-<body>
+<body class="container-fluid">
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
@@ -170,13 +170,13 @@
     </nav>
   </header>
 
-  <div class="main">
-    <section class="inspiration">
+  <div class="container-fluid">
+    <section class="inspiration container-fluid">
       <h2>Inspirations</h2>
       <p>Life is full of inspirations. I find inspiration in nature, art, and the incredible stories of people. Here's
         a snapshot of what inspires me:</p>
       <div class="im" style="display: flex; justify-content: space-evenly;">
-        <img src="./nature.jpeg" alt="Nature Inspiration" width="200px">
+        <img src="./nature.jpeg" alt="Nature Inspiration" width="200px" class="d-sm-none d-md-block">
         <img src="./art.jpeg" alt="Artistic Inspiration" width="200px">
         <img src="./2.jpeg" alt="Artistic Inspiration" width="200px">
         <img src="./5.jpeg" alt="Artistic Inspiration" width="200px">
@@ -185,23 +185,24 @@
       
     </section>
 
-    <section class="about">
+    <section class="about container-fluid">
       <h2>About Me</h2>
       <p>Hello, I'm Sheila Pink, a lifestyle influencer passionate about sharing my experiences and inspirations
         with the world. Join me on this journey of exploration and discovery.</p>
         <section class="quote-section">
           <h2>Favorite Quote</h2>
           <p class="quote" id="dynamicQuote">Life is an adventure, embrace it!</p>
-          <button class="interaction-btn" onclick="showRandomQuote()">click for Quote</button>
+          <button class="interaction-btn" style="background-color: rgb(43, 49, 41); border-radius: 10px;" onclick="showRandomQuote()">click for Quote</button>
         </section>
+        <button class="interaction-btn" style="background-color: orangered; border-radius: 10px;" onclick="askFuturePlans()">Ask Me About My Plans</button>
     </section>
 
-    <section class="gallery">
+    <section class="gallery container-fluid">
       <img src="./1.jpeg" alt="Image 1">
       <img src="./7.jpeg" alt="Image 2">
       <img src="./11.jpeg" alt="Image 3">
     </section>
-    <section class="future-plans">
+    <section class="future-plans container-fluid">
       <h2>Future Plans</h2>
       <p>Exciting plans lie ahead! I'm gearing up for new adventures and projects. Stay tuned for what's coming:</p>
       <div class="projects" style="display: flex; justify-content: space-evenly;">
@@ -226,7 +227,7 @@
   
 
   <!-- Copyright -->
-  <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
+  <div class="text-center p-2" style="color: white; background-color: rgba(0, 0, 0, 0.89);">
     © 2023 Copyright:
     <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Sheilapink.com</a>
   </div>
@@ -268,19 +269,7 @@
       const userFeedback = prompt("Your feedback is valuable! Share your thoughts:");
       alert(`Thank you for your feedback: ${userFeedback}`);
     }
-    function askForFeedback() {
-      const userFeedback = prompt("Your feedback is valuable! Share your thoughts:");
-      alert(`Thank you for your feedback: ${userFeedback}`);
-    }
 
-    function askFuturePlans() {
-      const userInput = prompt("What are your future plans or projects? Share with your audience!");
-      if (userInput) {
-        alert(`Exciting plans ahead! ${userInput}`);
-      } else {
-        alert("No worries, take your time for the big reveal!");
-      }
-    }
   </script>
 </body>
 
