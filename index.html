@@ -23,6 +23,62 @@
         padding-left: 240px;
       }
     }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    section.gallery {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 2em;
+    }
+
+    section.gallery img {
+      width: 30%;
+      border-radius: 10px;
+    }
+
+    .quote-section {
+      text-align: center;
+      padding: 2em;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #666;
+      margin-top: 1em;
+    }
+
+    .interaction-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
   </style>
 </head>
 
@@ -69,7 +125,7 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
-            
+
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -79,13 +135,20 @@
       </div>
     </nav>
 
-    <div class="main">
-     
-    </div>
+    <section class="gallery">
+      <img src="./1.jpeg" alt="Image 1">
+      <img src="./1.jpeg" alt="Image 2">
+      <img src="./1.jpeg" alt="Image 3">
+    </section>
 
-    <footer class="bg-body-tertiary text-center fixed-bottom" style="height: 120px;">
+    <section class="quote-section">
+      <p class="quote" id="dynamicQuote">Life is an adventure, embrace it!</p>
+      <button class="interaction-btn" onclick="showRandomQuote()">Show Random Quote</button>
+    </section>
+
+    <footer class="bg-body-tertiary text-center fixed-bottom" style="height: 90px;">
       <!-- Grid container -->
-      <div class="container p-4 pb-0" style="height: 30px;">
+      <div class="container" style="height: 30px; margin-top: 0;">
         <!-- Section: Social media -->
         <section class="mb-4">
           <!-- Facebook -->
@@ -116,7 +179,7 @@
       <!-- Grid container -->
 
       <!-- Copyright -->
-      <div class="text-center p-5" style="background-color: rgba(0, 0, 0, 0.05); color: black; font-weight: 700;">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05); color: black; font-weight: 700;">
         © 2020 Copyright:
         <a class="text-body" href="https://mdbootstrap.com/">Sheilpink.com</a>
       </div>
@@ -128,15 +191,20 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
     <script>
-      // Initialization for ES Users
-      import { Dropdown, initMDB } from "mdb-ui-kit";
+      function showRandomQuote() {
+    const quotes = [
+        "Live in the moment.",
+        "Be yourself; everyone else is already taken.",
+        "Life is either a daring adventure or nothing at all.",
+        "Happiness is not by chance, but by choice."
+    ];
 
-      initMDB({ Dropdown });
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const randomQuote = quotes[randomIndex];
 
-      // Initialization for ES Users
-      import { Carousel, initMDB } from "mdb-ui-kit";
+    document.getElementById('dynamicQuote').innerText = randomQuote;
+}
 
-      initMDB({ Carousel });
     </script>
 </body>
 
