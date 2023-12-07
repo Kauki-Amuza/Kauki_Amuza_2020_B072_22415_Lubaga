@@ -32,7 +32,7 @@
     }
 
     header {
-      background-color: #333;
+      background-color: #f7f7f7;
       color: white;
       padding: 1em;
       text-align: center;
@@ -70,19 +70,7 @@
       cursor: pointer;
     }
 
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 1em;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    .main {
-      padding: 0;
-    }
+   
 
     section.about {
       background-color: #fff;
@@ -171,16 +159,16 @@
   </header>
 
   <div class="container-fluid">
-    <section class="inspiration container-fluid">
+    <section class="inspiration">
       <h2>Inspirations</h2>
       <p>Life is full of inspirations. I find inspiration in nature, art, and the incredible stories of people. Here's
         a snapshot of what inspires me:</p>
-      <div class="im" style="display: flex; justify-content: space-evenly;">
-        <img src="./nature.jpeg" alt="Nature Inspiration" width="200px" class="d-sm-none d-md-block">
-        <img src="./art.jpeg" alt="Artistic Inspiration" width="200px">
-        <img src="./2.jpeg" alt="Artistic Inspiration" width="200px">
-        <img src="./6.jpeg" alt="Artistic Inspiration" width="200px">
-      </div>
+      <section class="gallery container-fluid">
+        <img src="./art.jpeg" alt="Artistic Inspiration">
+        <img src="./2.jpeg" alt="Artistic Inspiration">
+        <img src="./6.jpeg" alt="Artistic Inspiration">
+        <img src="./nature.jpeg" alt="Nature Inspiration">
+      </section>
       
     </section>
 
@@ -200,6 +188,7 @@
       <img src="./1.jpeg" alt="Image 1">
       <img src="./7.jpeg" alt="Image 2">
       <img src="./11.jpeg" alt="Image 3">
+      <img src="./9.jpeg" alt="Image 3">
     </section>
     <section class="future-plans">
       <h2>Future Plans</h2>
@@ -208,6 +197,7 @@
         <img src="./12.jpeg" alt="Future Project 2">
         <img src="./15.jpeg" alt="Future Project 2">
         <img src="./10.jpeg" alt="Future Project 2">
+        <img src="./8.jpeg" alt="Future Project 2">
       </section>
 
     </section>
@@ -220,13 +210,45 @@
   </div>
 
   <!-- Footer -->
-<footer class="text-center text-lg-start bg-body-tertiary text-muted bg-primary">
+<footer class="text-center text-lg-start fixed-bottom bg-body-tertiary text-muted bg-primary container-fluid">
   
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" 
+  style="color: white; background-color: rgba(0, 0, 0, 0.89);">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
 
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
   <!-- Copyright -->
   <div class="text-center p-2" style="color: white; background-color: rgba(0, 0, 0, 0.89);">
     © 2023 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Sheilapink.com</a>
+    <a class="text-reset fw-bold" href="#">Sheilapink.com</a>
   </div>
   <!-- Copyright -->
 </footer>
