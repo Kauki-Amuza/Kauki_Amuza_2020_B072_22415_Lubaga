@@ -79,6 +79,10 @@
       bottom: 0;
       width: 100%;
     }
+
+    .main {
+      padding: 0;
+    }
   </style>
 </head>
 
@@ -134,26 +138,44 @@
         </div>
       </div>
     </nav>
+    <div class="main">
+      <section class="inspiration">
+        <h2>Inspirations</h2>
+        <p>Life is full of inspirations. I find inspiration in nature, art, and the incredible stories of people. Here's
+          a snapshot of what inspires me:</p>
+        <img src="inspiration1.jpg" alt="Nature Inspiration">
+        <img src="inspiration2.jpg" alt="Artistic Inspiration">
+        <!-- Add more images and descriptions as needed -->
+      </section>
 
-    <section class="gallery">
-      <img src="./1.jpeg" alt="Image 1">
-      <img src="./7.jpeg" alt="Image 2">
-      <img src="./11.jpeg" alt="Image 3">
-    </section>
+      <section class="gallery">
+        <img src="./1.jpeg" alt="Image 1">
+        <img src="./7.jpeg" alt="Image 2">
+        <img src="./11.jpeg" alt="Image 3">
+      </section>
+      <section class="future-plans">
+        <h2>Future Plans</h2>
+        <p>Exciting plans lie ahead! I'm gearing up for new adventures and projects. Stay tuned for what's coming:</p>
+        <img src="future1.jpg" alt="Future Project 1">
+        <img src="future2.jpg" alt="Future Project 2">
 
-    <section class="quote-section">
-      <h2>Favorite Quote</h2>
-      <p class="quote" id="dynamicQuote">Life is an adventure, embrace it!</p>
-      <button class="interaction-btn" onclick="showRandomQuote()">Show Random Quote</button>
-    </section>
-  <section class="connect">
-      <h2>Let's Connect</h2>
-      <p>Follow me on social media to stay updated on my latest adventures:</p>
-  </section>
+      </section>
 
-    <footer class="bg-body-tertiary text-center fixed-bottom" style="height: 90px;">
+      <section class="quote-section">
+        <h2>Favorite Quote</h2>
+        <p class="quote" id="dynamicQuote">Life is an adventure, embrace it!</p>
+        <button class="interaction-btn" onclick="showRandomQuote()">Show Random Quote</button>
+      </section>
+      <section class="connect">
+        <h2>Let's Connect</h2>
+        <p>Follow me on social media to stay updated on my latest adventures:</p>
+      </section>
+    </div>
+
+    <footer class="bg-body-tertiary text-center"
+      style="height: 70px; display: flex; justify-content: space-evenly; width: 100%;">
       <!-- Grid container -->
-      <div class="container" style="height: 30px; margin-top: 0;">
+      <div class="container" style="height: 30px; margin-top: 0; width: 100%;">
         <!-- Section: Social media -->
         <section class="mb-4">
           <!-- Facebook -->
@@ -180,15 +202,10 @@
             role="button"><i class="fab fa-github"></i></a>
         </section>
         <!-- Section: Social media -->
-      </div>
-      <!-- Grid container -->
 
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05); color: black; font-weight: 700;">
-        © 2020 Copyright:
-        <a class="text-body" href="https://mdbootstrap.com/">Sheilpink.com</a>
       </div>
-      <!-- Copyright -->
+
+
     </footer>
 
 
@@ -197,18 +214,33 @@
       crossorigin="anonymous"></script>
     <script>
       function showRandomQuote() {
-    const quotes = [
-        "Live in the moment.",
-        "Be yourself; everyone else is already taken.",
-        "Life is either a daring adventure or nothing at all.",
-        "Happiness is not by chance, but by choice."
-    ];
+        const quotes = [
+          "Live in the moment.",
+          "Be yourself; everyone else is already taken.",
+          "Life is either a daring adventure or nothing at all.",
+          "Happiness is not by chance, but by choice."
+        ];
 
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    const randomQuote = quotes[randomIndex];
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const randomQuote = quotes[randomIndex];
 
-    document.getElementById('dynamicQuote').innerText = randomQuote;
-}
+        document.getElementById('dynamicQuote').innerText = randomQuote;
+      }
+      // Function to show a prompt for future plans
+      function askFuturePlans() {
+        const userInput = prompt("What are your future plans or projects? Share with your audience!");
+        if (userInput) {
+          alert(`Exciting plans ahead! ${userInput}`);
+        } else {
+          alert("No worries, take your time for the big reveal!");
+        }
+      }
+
+      // Function to show an input prompt for user feedback
+      function askForFeedback() {
+        const userFeedback = prompt("Your feedback is valuable! Share your thoughts:");
+        alert(`Thank you for your feedback: ${userFeedback}`);
+      }
 
     </script>
 </body>
